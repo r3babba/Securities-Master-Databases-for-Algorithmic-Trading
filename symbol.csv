@@ -1,0 +1,31 @@
+,exchange_id,ticker,name,sector,created_date,last_updated_date
+1,1, MMM,3M,Conglomerate,2020-02-03 21:21:51,2020-02-03 21:21:51
+2,1, AXP,American Express,Financial services,2020-02-03 21:21:51,2020-02-03 21:21:51
+3,2,AAPL,Apple Inc.,Information technology,2020-02-03 21:21:51,2020-02-03 21:21:51
+4,1, BA,Boeing,Aerospace manufacturer and Arms industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+5,1, CAT,Caterpillar Inc.,Construction and Mining,2020-02-03 21:21:51,2020-02-03 21:21:51
+6,1, CVX,Chevron Corporation,Petroleum industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+7,2,CSCO,Cisco Systems,Information technology,2020-02-03 21:21:51,2020-02-03 21:21:51
+8,1, KO,The Coca-Cola Company,Food industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+9,1, DOW,Dow Inc.,Chemical industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+10,1, XOM,ExxonMobil,Petroleum industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+11,1, GS,Goldman Sachs,Financial services,2020-02-03 21:21:51,2020-02-03 21:21:51
+12,1, HD,The Home Depot,Retailing,2020-02-03 21:21:51,2020-02-03 21:21:51
+13,1, IBM,IBM,Information technology,2020-02-03 21:21:51,2020-02-03 21:21:51
+14,2,INTC,Intel,Information technology,2020-02-03 21:21:51,2020-02-03 21:21:51
+15,1, JNJ,Johnson & Johnson,Pharmaceutical industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+16,1, JPM,JPMorgan Chase,Financial services,2020-02-03 21:21:51,2020-02-03 21:21:51
+17,1, MCD,McDonald's,Food industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+18,1, MRK,Merck & Co.,Pharmaceutical industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+19,2,MSFT,Microsoft,Information technology,2020-02-03 21:21:51,2020-02-03 21:21:51
+20,1, NKE,Nike,Apparel,2020-02-03 21:21:51,2020-02-03 21:21:51
+21,1, PFE,Pfizer,Pharmaceutical industry,2020-02-03 21:21:51,2020-02-03 21:21:51
+22,1, PG,Procter & Gamble,Fast moving consumer goods,2020-02-03 21:21:51,2020-02-03 21:21:51
+23,1, TRV,The Travelers Companies,Financial services,2020-02-03 21:21:51,2020-02-03 21:21:51
+24,1, UNH,UnitedHealth Group,Managed health care,2020-02-03 21:21:51,2020-02-03 21:21:51
+25,1, UTX,United Technologies,Conglomerate,2020-02-03 21:21:51,2020-02-03 21:21:51
+26,1, VZ,Verizon,Telecommunication,2020-02-03 21:21:51,2020-02-03 21:21:51
+27,1, V,Visa Inc.,Financial services,2020-02-03 21:21:51,2020-02-03 21:21:51
+28,1, WMT,Walmart,Retailing,2020-02-03 21:21:51,2020-02-03 21:21:51
+29,2,WBA,Walgreens Boots Alliance,Retailing,2020-02-03 21:21:51,2020-02-03 21:21:51
+30,1, DIS,The Walt Disney Company,Broadcasting and entertainment,2020-02-03 21:21:51,2020-02-03 21:21:51

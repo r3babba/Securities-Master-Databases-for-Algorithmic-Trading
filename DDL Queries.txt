@@ -1,0 +1,77 @@
+mysql> CREATE DATABASE securities_master_db;
+Query OK, 1 row affected (0.20 sec)
+mysql> USE securities_master_db;
+Database changed
+
+
+mysql> CREATE TABLE `exchange` (  `id` int,  `abbrev` varchar(32) NOT NULL,  `name` varchar(255) NOT NULL,  `city` varchar(255) NULL,  `country` varchar(255) NULL,  `currency` varchar(64) NULL,  `timezone_offset` time NULL,  `created_date` datetime NOT NULL,  `last_updated_date` datetime NOT NULL,  PRIMARY KEY (`id`));
+Query OK, 0 rows affected (0.19 sec)
+mysql> describe exchange;
++-------------------+--------------+------+-----+---------+-------+
+| Field             | Type         | Null | Key | Default | Extra |
++-------------------+--------------+------+-----+---------+-------+
+| id                | int(11)      | NO   | PRI | NULL    |       |
+| abbrev            | varchar(32)  | NO   |     | NULL    |       |
+| name              | varchar(255) | NO   |     | NULL    |       |
+| city              | varchar(255) | YES  |     | NULL    |       |
+| country           | varchar(255) | YES  |     | NULL    |       |
+| currency          | varchar(64)  | YES  |     | NULL    |       |
+| timezone_offset   | time         | YES  |     | NULL    |       |
+| created_date      | datetime     | NO   |     | NULL    |       |
+| last_updated_date | datetime     | NO   |     | NULL    |       |
++-------------------+--------------+------+-----+---------+-------+
+9 rows in set (0.00 sec)
+
+
+mysql> CREATE TABLE `data_vendor` (  `id` int NOT NULL AUTO_INCREMENT,  `name` varchar(64) NOT NULL,  `website_url` varchar(255) NULL,  `support_email` varchar(255) NULL,  `created_date` datetime NOT NULL,  `last_updated_date` datetime NOT NULL,  PRIMARY KEY (`id`))
+    -> ;
+Query OK, 0 rows affected (0.09 sec)
+mysql> describe data_vendor;
++-------------------+--------------+------+-----+---------+----------------+
+| Field             | Type         | Null | Key | Default | Extra          |
++-------------------+--------------+------+-----+---------+----------------+
+| id                | int(11)      | NO   | PRI | NULL    | auto_increment |
+| name              | varchar(64)  | NO   |     | NULL    |                |
+| website_url       | varchar(255) | YES  |     | NULL    |                |
+| support_email     | varchar(255) | YES  |     | NULL    |                |
+| created_date      | datetime     | NO   |     | NULL    |                |
+| last_updated_date | datetime     | NO   |     | NULL    |                |
++-------------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
+
+mysql> CREATE TABLE `symbol` (  `id` int,  `exchange_id` int NULL,  `ticker` varchar(32) NOT NULL,  `name` varchar(255) NULL,  `sector` varchar(255) NULL,  `created_date` datetime NOT NULL,  `last_updated_date` datetime NOT NULL,  PRIMARY KEY (`id`),  FOREIGN KEY (exchange_id) REFERENCES exchange(id));
+Query OK, 0 rows affected (0.28 sec)
+mysql> describe symbol;
++-------------------+--------------+------+-----+---------+-------+
+| Field             | Type         | Null | Key | Default | Extra |
++-------------------+--------------+------+-----+---------+-------+
+| id                | int(11)      | NO   | PRI | NULL    |       |
+| exchange_id       | int(11)      | YES  | MUL | NULL    |       |
+| ticker            | varchar(32)  | NO   |     | NULL    |       |
+| name              | varchar(255) | YES  |     | NULL    |       |
+| sector            | varchar(255) | YES  |     | NULL    |       |
+| created_date      | datetime     | NO   |     | NULL    |       |
+| last_updated_date | datetime     | NO   |     | NULL    |       |
++-------------------+--------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+
+mysql> create table daily_price (id int, Open decimal, High decimal, Low decimal, Close decimal, Adj_Close decimal, Volume int, price_date date, ticker varchar(32) NOT NULL, data_vendor_id int, primary key (id), foreign key (data_vendor_id) references data_vendor(id)  );
+Query OK, 0 rows affected (0.15 sec)
+mysql> describe daily_price;
++----------------+---------------+------+-----+---------+-------+
+| Field          | Type          | Null | Key | Default | Extra |
++----------------+---------------+------+-----+---------+-------+
+| id             | int(11)       | NO   | PRI | NULL    |       |
+| Open           | decimal(10,0) | YES  |     | NULL    |       |
+| High           | decimal(10,0) | YES  |     | NULL    |       |
+| Low            | decimal(10,0) | YES  |     | NULL    |       |
+| Close          | decimal(10,0) | YES  |     | NULL    |       |
+| Adj_Close      | decimal(10,0) | YES  |     | NULL    |       |
+| Volume         | int(11)       | YES  |     | NULL    |       |
+| price_date     | date          | YES  |     | NULL    |       |
+| ticker         | varchar(32)   | NO   |     | NULL    |       |
+| data_vendor_id | int(11)       | YES  | MUL | NULL    |       |
++----------------+---------------+------+-----+---------+-------+
+10 rows in set (0.03 sec)
